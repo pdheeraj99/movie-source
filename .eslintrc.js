@@ -1,13 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: ['plugin:react/recommended', 'airbnb'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react'],
   rules: {
@@ -15,13 +15,24 @@ module.exports = {
     'react/prop-types': 0,
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
-    'trailing-comma': false,
+    // 'trailing-comma': false,
+    'comma-dangle': 'off',
+    // '@typescript-eslint/comma-dangle': [
+    //   'error',
+    //   {
+    //     arrays: 'never',
+    //     objects: 'always-multiline',
+    //     imports: 'never',
+    //     exports: 'never',
+    //     functions: 'never'
+    //   }
+    // ],
     'import/prefer-default-export': 0,
     'max-len': [2, 250],
     'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
     'no-underscore-dangle': [
       'error',
-      { allow: ['_d', '_dh', '_h', '_id', '_m', '_n', '_t', '_text'] },
+      { allow: ['_d', '_dh', '_h', '_id', '_m', '_n', '_t', '_text'] }
     ],
     'object-curly-newline': 0,
     'react/jsx-filename-extension': 0,
@@ -38,8 +49,8 @@ module.exports = {
       {
         components: ['Link'],
         specialLink: ['to', 'hrefLeft', 'hrefRight'],
-        aspects: ['noHref', 'invalidHref', 'preferButton'],
-      },
-    ],
-  },
+        aspects: ['noHref', 'invalidHref', 'preferButton']
+      }
+    ]
+  }
 };
